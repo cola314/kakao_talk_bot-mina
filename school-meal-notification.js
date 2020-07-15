@@ -29,8 +29,8 @@ if(msg.indexOf('라고') != -1) {
     replier.reply(msg.substr(0, msg.indexOf('라고')));
     return;
 }
-if(msg.indexOf('!') != -1) {
-    replier.reply(msg.substr(0, msg.indexOf('!')));
+if(msg[msg.length-1] == '!') {
+    replier.reply(msg.substr(0, msg.length-1));
     return;
 }
 if(msg.indexOf('예시') != -1){
