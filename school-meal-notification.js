@@ -76,7 +76,7 @@ if(msg.indexOf('급식') == -1) return;
 }
 
 function dataParse(dinfo) {
-    if(memo[dinfo]) return memo[dinfo];
+	if(memo[dinfo]) return memo[dinfo];
 	var url = 'http://www.sht.hs.kr/?_page=41&yy='+ dinfo[0] +'&mm='+ dinfo[1] +'&dd='+ dinfo[2] +'&_action=view&_view=view';
 	var data=org.jsoup.Jsoup.connect(url).get().select('dd,dt') + "";
     	var ret = data.replace(/[^\uAC00-\uD7AF\u1100-\u11FF\u3130-\u318F]/gi," ");
